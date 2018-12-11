@@ -7,7 +7,6 @@ class Button:
 	true if the button is active and p is inside it. """
 
 	activate = True
-	deactivated = False
 	label = ""
 	Button = ""
 
@@ -42,12 +41,14 @@ class Button:
 		"""returns true if the button active and p is inside"""
 		left_side = self.Button.getP1()
 		right_side = self.Button.getP2()
+		self.activate_die()
 		if self.activate == True:
-			print("hello")
+			print(left_side.x <= p.x <= right_side.x and left_side.y <= p.y <= right_side.y)
 			return left_side.x <= p.x <= right_side.x and left_side.y <= p.y <= right_side.y
+			self.deactivate()
 
 		else:
-			return True
+			return False
 
 
 
@@ -59,7 +60,7 @@ class Button:
 
 	#CODE
 
-	def activate(self):
+	def activate_die(self):
 		"""Sets this button to 'active'"""
 		self.activate = True
 
@@ -67,6 +68,6 @@ class Button:
 
 	def deactivate (self):
 		"""Sets this button to 'active'"""
-		self.activated = False
+		self.activate = False
 
 	#CODE

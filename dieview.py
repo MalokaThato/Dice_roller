@@ -3,6 +3,7 @@ import random
 
 class DieView:
 	"""DieView is a widget that displays a graphical representation of a standard six-sided die."""
+	die_Number = 0
 
 
 	def __init__(self, win, center, size):
@@ -71,24 +72,29 @@ class DieView:
 
 		if value == 1:
 			self.pip7.setFill(self.foreground)
+			self.die_Number = 1
 		elif value == 2:
 			self.pip1.setFill(self.foreground)
 			self.pip4.setFill(self.foreground)
+			self.die_Number = 2
 		elif value == 3:
 			self.pip1.setFill(self.foreground)
 			self.pip4.setFill(self.foreground)
 			self.pip7.setFill(self.foreground)
+			self.die_Number = 3
 		elif value == 4:
 			self.pip1.setFill(self.foreground)
 			self.pip3.setFill(self.foreground)
 			self.pip4.setFill(self.foreground)
 			self.pip6.setFill(self.foreground)
+			self.die_Number = 4
 		elif value == 5:
 			self.pip1.setFill(self.foreground)
 			self.pip3.setFill(self.foreground)
 			self.pip4.setFill(self.foreground)
 			self.pip6.setFill(self.foreground)
 			self.pip7.setFill(self.foreground)
+			self.die_Number = 5
 		elif value == 6:
 			self.pip1.setFill(self.foreground)
 			self.pip3.setFill(self.foreground)
@@ -96,6 +102,7 @@ class DieView:
 			self.pip6.setFill(self.foreground)
 			self.pip2.setFill(self.foreground)
 			self.pip5.setFill(self.foreground)
+			self.die_Number = 6
 
 		#turn all pips off
 
