@@ -121,7 +121,7 @@ def number_Of_Pairs(self,*kwargs):
 			if count == 5 or count == 4:
 				return "rule6"
 			elif count == 4:
-				return "rule4"
+				return "rule"
 			elif count == 3:
 				for inner_count in kwargs:
 					if kwargs[die_check_count] != inner_count:
@@ -135,7 +135,13 @@ def number_Of_Pairs(self,*kwargs):
 					return "rule2"
 
 			elif count == 2:
-				return "rule1"
+				for inner_count in kwargs:
+					if kwargs[die_check_count] == inner_count:
+						skeep_count_lst.append(inner_count)
+						print(skeep_count_lst)
+
+				if len(skeep_count_lst) == 8:
+					return "rule1"
 
 
 
